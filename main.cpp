@@ -5,14 +5,7 @@
 #include "box.hpp"
 #include "truckDelivery.hpp"
 
-
 using namespace std;
-
-
-
-
-
-
 int main()
 {
     TruckDelivery delivery;

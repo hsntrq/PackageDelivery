@@ -18,7 +18,7 @@ class Box{
             width = (rand() %25) + 5;
             height = (rand() %25) + 5;
         }
-        int volume(){
+        int Volume(){
             return volume;
         }
 };

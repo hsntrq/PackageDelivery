@@ -1,8 +1,11 @@
 #pragma once
+#include <iostream>
 #include "box.hpp"
+using namespace std;
+
 class Truck
 {
-    private:
+    public:
         string driver;
         int petrol;
         int money;
@@ -18,12 +21,12 @@ class Truck
             emptyMileage = emptym;
         }
 
-        void load(){
-            for (int i = 0; i < 10; i++) cout<<box[i];
-        }
-        void unload(){
-            for (int i = 0; i < 10; i++) cout<<box[i];
-        }
+        // void load(){
+        //     for (int i = 0; i < 10; i++) std::cout<<box[i];
+        // }
+        // void unload(){
+        //     for (int i = 0; i < 10; i++) std::cout<<box[i];
+        // }
         float cost();
 };
 
