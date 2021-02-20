@@ -10,7 +10,6 @@ class Box{
         int length;
         int width;
         int height;
-        int volume = length * width * height;
     public:
         Box(){
             srand(time(0));
@@ -18,7 +17,7 @@ class Box{
             width = (rand() %25) + 5;
             height = (rand() %25) + 5;
         }
-        int Volume(){
-            return volume;
+        int volume(){
+            return length * width * height;
         }
 };
