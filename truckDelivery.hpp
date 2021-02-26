@@ -33,11 +33,16 @@ public:
             trucks.at(i).update();
     }
     void unloadTrucks(ofstream& output_file){
-        for (int i=0; i<trucks.size(); i++){
-            if(trucks[i].Trip()){
-            trucks[i].unload();
-            trucks[i].Record(output_file);
+        int j = 0;
+        for (auto i = trucks.begin(); i != trucks.end(); ++i) {
+            if(trucks[j].Trip()){
+                trucks[j].unload();
+                trucks[j].Record(output_file);
             }
+            else{
+                trucks.erase(i);
+            }
+            j++;
         }
     }
 };
