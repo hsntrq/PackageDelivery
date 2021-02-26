@@ -23,8 +23,22 @@ public:
             }
         }
     }
-    void calculateCost();
-    void makeJourney();
-    void unloadTrucks();
+    void calculateCost(){
+        std::cout << "Cost spended by each driver for the fuel"<<endl;
+        for(int i=0; i < trucks.size(); i++)
+            std::cout << "Travel cost for Truck "<<i+1<<" is: "<<trucks.at(i).cost()<<endl;
+    }
+    void makeJourney(){
+        for(int i=0; i < trucks.size(); i++)
+            trucks.at(i).update();
+    }
+    void unloadTrucks(ofstream& output_file){
+        for (int i=0; i<trucks.size(); i++){
+            if(trucks[i].Trip()){
+            trucks[i].unload();
+            trucks[i].Record(output_file);
+            }
+        }
+    }
 };
 	

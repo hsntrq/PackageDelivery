@@ -12,12 +12,14 @@ class Box{
         int height;
     public:
         Box(){
-            srand(time(0));
             length = (rand() %25) + 5;
             width = (rand() %25) + 5;
             height = (rand() %25) + 5;
         }
         int volume(){
             return length * width * height;
+        }
+        void Load(){
+            std::cout << ", Length: "<<length<<", Width: "<<width<<", Height: "<<height<<endl;
         }
 };
